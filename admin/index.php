@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    // include '../library/koneksi.php';
+    if (!isset($_SESSION['jabatan'])) {
+        include '../login/login.php';
+    }else{
+        
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -315,3 +324,6 @@
 </body>
 
 </html>
+<?php
+    }
+?>
