@@ -27,9 +27,7 @@
                     <div class="input-box animation" style="--i:2; --j:19;">
                          <input type="password" id="password" name="password" required>
                         <label>Password</label>
-                        <i class='bx bxs-lock-alt' ></i> -->
-                        <!-- <label for="password">Password:</label> -->
-                        <!-- <input type="password" id="password" placeholder="Enter password"> -->
+                        <i class='bx bxs-lock-alt' ></i>
                     </div>
                     <button type="submit" class="btn animation" style="--i:3; --j:20;" name="btn">Login</button>
                     <div class="logreg-link animation" style="--i:4; --j:21;">
