@@ -4,7 +4,7 @@
     if (!isset($_SESSION['jabatan'])) {
         include '../login/login.php';
     }else{
-        
+        $jabatan = $_SESSION['jabatan'];
     
 ?>
 <!DOCTYPE html>
