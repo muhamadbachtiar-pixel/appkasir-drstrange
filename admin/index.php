@@ -28,6 +28,7 @@
 
     <!-- Custom styles for this template-->
     <link href="../asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../asset/font-awesome" rel="stylesheet">
 
 </head>
 
@@ -135,9 +136,9 @@
                                 </div>
                             </button>
                             <ul class="dropdown-menu m-4" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="?">Profile</a></li>
                                 <li><a class="dropdown-item ms-3" href="#">Setting</a></li>
-                                <li><a class="dropdown-item ms-3" href="#">Logout</a></li>
+                                <li><a class="dropdown-item ms-3" href="?page=logout">Logout</a></li>
                             </ul>
                         </div>
                         </li>
@@ -185,5 +186,15 @@
 
 </html>
 <?php
+error_reporting(0);
+    switch ($_GET['page']) {
+        case 'logout':
+            include 'login/logout.php';
+            break;
+        
+        default:
+            # code...
+            break;
+    }
     }
 ?>
