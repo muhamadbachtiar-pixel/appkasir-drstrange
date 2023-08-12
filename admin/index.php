@@ -62,7 +62,7 @@
             <li class="nav-item active ">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span class="">Dashboard</span></a>
+                    <span class="">User</span></a>
             </li>
 
             <!-- Divider -->
