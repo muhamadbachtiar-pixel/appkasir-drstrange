@@ -12,7 +12,7 @@
     
     <body>
     <?php
-                    // include '../library/koneksi.php';
+                    
                     // if (isset($_POST['submit'])) {
                     //     $eror = "maaf anda gagal login";
                     //     $user = $_POST['username'];
@@ -28,16 +28,18 @@
                     //         // echo "$eror";
                     //     }
                     // 
+    include '../library/koneksi.php';
 	if (isset($_POST['submit'])) {
 		$user = $_POST['user'];
 		$pass = md5($_POST['pass']);
 		$sql = mysqli_query($con, "SELECT * FROM tb_admin WHERE username= '$user' and password= '$pass'");
 		$row =mysqli_num_rows($sql);
-		$result =mysqli_fetch_assoc($sql);
+		$result =mysqli_fetch_array($sql);
 		if ($row > 0) {
+			$_SESSION['jabatan']=$result['jabatan'];
 			$_SESSION['email']=$result['email'];
-            
-            header('location:index.php');
+            echo "<script>alert('You have successfully log in');window.location.href='../admin/index.php';</script>";
+            // header('location:index.php');
             
 		}else{
 			echo "terjadi kesalahan";
