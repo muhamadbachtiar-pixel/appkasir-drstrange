@@ -1,12 +1,11 @@
-<?php
+<?php 
     session_start();
-    // include '../library/koneksi.php';
-    if (!isset($_SESSION['jabatan'])) {
-        include '../login/login.php';
-    }else{
-        $jabatan = $_SESSION['jabatan'];
-    
-?>
+    include'../library/koneksi.php';
+	if (!isset($_SESSION['user'])) {
+		include 'login/login.php';
+	}else{
+		$jabatan = $_SESSION['jabatan'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 

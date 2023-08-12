@@ -11,20 +11,53 @@
     </head>
     
     <body>
+    <?php
+                    // include '../library/koneksi.php';
+                    // if (isset($_POST['submit'])) {
+                    //     $eror = "maaf anda gagal login";
+                    //     $user = $_POST['username'];
+                    //     $pass = md5($_POST['password']);
+                    //     $result = mysqli_query($con, "SELECT * FROM tb_admin WHERE username = '$user' and password = '$pass'");
+                    //     $row = mysqli_num_rows($result);
+                    //     $sql = mysqli_fetch_assoc($result);
+
+                    //     if ($row > 0) {
+                    //         $_SESSION['user']=$result['jabatan'];
+                    //         echo "<script>alert('You have successfully log in');window.location.href='../admin/index.php';</script>";
+                    //     }else{
+                    //         // echo "$eror";
+                    //     }
+                    // 
+	if (isset($_POST['submit'])) {
+		$a = $_POST['user'];
+		$b = md5($_POST['pass']);
+		$sql = mysqli_query($con, "SELECT * FROM tb_admin WHERE username= '$a' and password= '$b'");
+		$row =mysqli_num_rows($sql);
+		$result =mysqli_fetch_assoc($sql);
+		if ($row > 0) {
+			$_SESSION['user']=$result['jabatan'];
+			// header('location:index.php');
+            echo "berhasil masuk";
+		}else{
+			echo "terjadi kesalahan";
+		}
+	}
+ ?>
+
         <div class="wrapper">
             <span class="bg-animate"></span>
             <span class="bg-animate2"></span>
-    
+            
             <div class="form-box login">
                 <h2 class="animation" style="--i:0; --j:17;">Login Admin</h2>
                 <form action="#" method="POST">
                     <div class="input-box animation" style="--i:1; --j:18;">
-                        <input type="username" name="username" required>
+                        <input type="username" name="user" required>
                         <label>Username</label>
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="input-box animation" style="--i:2; --j:19;">
-                         <input type="password" id="password" name="password" required>
+                         <input type="password" id="password" name="pass" required>
                         <label>Password</label>
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
@@ -33,24 +66,7 @@
                         <p>belum memiliki akun? <a href="#" class="register-link">Daftar</a></p>
                     </div>
                 </form>
-                <?php
-                    include '../library/koneksi.php';
-                    if (isset($_POST['submit'])) {
-                        $eror = "maaf anda gagal login";
-                        $username = $_POST['username'];
-                        $password = md5($_POST['password']);
-                        $result = mysqli_query($con, "SELECT * FROM tb_admin WHERE username = '$username' and password = '$password'");
-                        $row = mysqli_num_rows($result);
-                        $sql = mysqli_fetch_assoc($result);
-
-                        if ($row == 1) {
-                            $_SESSION['jabatan']=$result['jabatan'];
-                            echo "<script>alert('You have successfully log in');window.location.href='../admin/index.php';</script>";
-                        }else{
-                            // echo "$eror";
-                        }
-                    }
-                ?>
+                
             </div>
             <div class="info-text login">
                 <h2 class="animation" style="--i:0; --j:17;">Warehouse Management System</h2>
