@@ -1,10 +1,11 @@
 <?php 
     session_start();
     include'../library/koneksi.php';
-	if (!isset($_SESSION['user'])) {
+	if (!isset($_SESSION['jabatan'])) {
 		include 'login/login.php';
 	}else{
 		$jabatan = $_SESSION['jabatan'];
+		$email = $_SESSION['email'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +44,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">HALAMAN ADMIN</div>
+                <div class="sidebar-brand-text mx-3">HALAMAN <?=$jabatan?></div>
             </a>
 
             <!-- Divider -->
@@ -237,34 +238,24 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
+                        <li class="nav-item dropdown no-arrow me-3">
+                        <div class="dropdown mt-3">
+                            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h6 class="mt-1"><?=$email?></h6>
+                                    </div>
+                                    <div class="col-md-4">
+                                    <img class="img-profile rounded-circle"
+                                    src="image/user.png" width="30px">
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu m-4" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item ms-3" href="#">Setting</a></li>
+                            </ul>
+                        </div>
                         </li>
 
                     </ul>
@@ -303,23 +294,9 @@
                             </div>
                         </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
+        <script src="../asset/js/sb-admin-2.min.js"></script>
+        <script src="../asset/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

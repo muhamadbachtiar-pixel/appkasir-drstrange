@@ -29,15 +29,17 @@
                     //     }
                     // 
 	if (isset($_POST['submit'])) {
-		$a = $_POST['user'];
-		$b = md5($_POST['pass']);
-		$sql = mysqli_query($con, "SELECT * FROM tb_admin WHERE username= '$a' and password= '$b'");
+		$user = $_POST['user'];
+		$pass = md5($_POST['pass']);
+		$sql = mysqli_query($con, "SELECT * FROM tb_admin WHERE username= '$user' and password= '$pass'");
 		$row =mysqli_num_rows($sql);
 		$result =mysqli_fetch_assoc($sql);
 		if ($row > 0) {
-			$_SESSION['user']=$result['jabatan'];
-			// header('location:index.php');
-            echo "berhasil masuk";
+			$_SESSION['jabatan']=$result['jabatan'];
+			$_SESSION['email']=$result['username'];
+            
+            header('location:index.php');
+            
 		}else{
 			echo "terjadi kesalahan";
 		}
