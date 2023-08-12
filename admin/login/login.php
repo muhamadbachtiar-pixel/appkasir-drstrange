@@ -37,12 +37,12 @@
 		$result =mysqli_fetch_array($sql);
 		if ($row > 0) {
 			$_SESSION['jabatan']=$result['jabatan'];
-			$_SESSION['email']=$result['email'];
-            echo "<script>alert('You have successfully log in');window.location.href='../admin/index.php';</script>";
+			$_SESSION['nama']=$result['nama'];
+            echo "<script>alert('Selamat Datang');window.location.href='../admin/index.php';</script>";
             // header('location:index.php');
             
 		}else{
-			echo "terjadi kesalahan";
+			echo "<script>alert('Anda Bukan Bagian Dari Kami')</script>";
 		}
 	}
  ?>
