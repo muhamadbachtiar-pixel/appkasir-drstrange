@@ -35,8 +35,7 @@
 		$row =mysqli_num_rows($sql);
 		$result =mysqli_fetch_assoc($sql);
 		if ($row > 0) {
-			$_SESSION['jabatan']=$result['jabatan'];
-			$_SESSION['email']=$result['username'];
+			$_SESSION['email']=$result['email'];
             
             header('location:index.php');
             
