@@ -5,7 +5,7 @@
 		include 'login/login.php';
 	}else{
 		$jabatan = $_SESSION['jabatan'];
-		$email = $_SESSION['email'];
+		$nama = $_SESSION['nama'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
 
     <!-- Custom styles for this template-->
     <link href="../asset/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="../asset/font-awesome" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -41,7 +41,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -52,10 +52,17 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item active ">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span class="">Dashboard</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active ">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span class="">Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -71,7 +78,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-primary topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -85,8 +92,8 @@
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
+                                <button class="btn btn-light" type="button">
+                                <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
@@ -123,15 +130,11 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow me-3">
-                        <div class="dropdown mt-3">
+                        <div class="dropdown mt-1">
                             <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="row">
-                                    <div class="col-md-8">
-                                        <h6 class="mt-1"><?=$email?></h6>
-                                    </div>
-                                    <div class="col-md-4">
-                                    <img class="img-profile rounded-circle"
-                                    src="image/user.png" width="30px">
+                                    <div class="col-md-12">
+                                        <h6 class="mt-1 text-white"><?=$nama?></h6>
                                     </div>
                                 </div>
                             </button>
@@ -149,7 +152,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid bg-white m-2">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
