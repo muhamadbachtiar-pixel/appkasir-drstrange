@@ -29,7 +29,8 @@
     <!-- Custom styles for this template-->
     <link href="../asset/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -56,14 +57,14 @@
             <li class="nav-item active ">
                 <a class="nav-link" href="?page=home">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span class="">Dashboard</span></a>
+                    <i class="fa fa-tachometer" aria-hidden="true"></i><span class="">Dashboard</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item active ">
                 <a class="nav-link" href="?page=user">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span class="">User</span></a>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">User</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
@@ -154,8 +155,14 @@
 
         <script src="../asset/js/sb-admin-2.min.js"></script>
         <script src="../asset/js/bootstrap.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+        <script>
+            new DataTable('#example');
+        </script>
+    </body>
 
 </html>
 <?php
@@ -166,6 +173,9 @@ if (!isset($_GET['page'])) {
     switch ($_GET['page']) {
         case 'home':
             include 'modul/home.php';
+            break;
+        case 'user':
+            include 'modul/user.php';
             break;
         case 'logout':
             include 'login/logout.php';

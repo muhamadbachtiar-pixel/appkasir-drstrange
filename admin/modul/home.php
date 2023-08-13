@@ -26,6 +26,9 @@
                                         </div>
                                         <div class="col-auto">
                                         <i class="fa fa-list-alt" aria-hidden="true" style="font-size:40px;"></i>
+                                        <div class="mt-3">
+                                            <a class="nav-link"href="?page=detail&"><i class="fa fa-arrow-circle-right text-danger ms-3" style="font-size:30px;" aria-hidden="true"></i></a>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
