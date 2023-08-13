@@ -67,6 +67,12 @@
                     <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">User</span></a>
             </li>
             <hr class="sidebar-divider my-0">
+            <li class="nav-item active ">
+                <a class="nav-link" href="?page=input-barang">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">Input Barang</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
 
             <div class="sidebar-heading mt-4">
                 USER
@@ -176,6 +182,9 @@ if (!isset($_GET['page'])) {
             break;
         case 'user':
             include 'modul/user.php';
+            break;
+        case 'input-barang':
+            include 'modul/input-barang.php';
             break;
         case 'logout':
             include 'login/logout.php';
