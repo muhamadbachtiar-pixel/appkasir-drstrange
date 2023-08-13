@@ -30,6 +30,8 @@
     <link href="../asset/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body id="page-top">
@@ -41,11 +43,10 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">HALAMAN <?=$jabatan?></div>
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15" style="font-size:30px;"></div>
+                    <div class="sidebar-brand-text mx-3"><span>AppKasir</span></div>
+                </a>
             </a>
 
             <!-- Divider -->
@@ -60,9 +61,30 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item active ">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="?page=user">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span class="">User</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+
+            <div class="sidebar-heading mt-4">
+                USER
+            </div>
+            <li class="nav-item active ">
+                        <div class="dropdown">
+                            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h6 class="mt-1 text-white"><?=$nama?></h6>
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu m-4" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="?">Profile</a></li>
+                                <li><a class="dropdown-item ms-3" href="#">Setting</a></li>
+                                <li><a class="dropdown-item ms-3" href="?page=logout">Logout</a></li>
+                            </ul>
+                        </div>
             </li>
 
             <!-- Divider -->
@@ -78,7 +100,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-primary topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light  topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -86,18 +108,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-light" type="button">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    <h2>Selamat Datang <span><b><?=$jabatan?>😋</b></span></h2>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -130,20 +141,7 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow me-3">
-                        <div class="dropdown mt-1">
-                            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h6 class="mt-1 text-white"><?=$nama?></h6>
-                                    </div>
-                                </div>
-                            </button>
-                            <ul class="dropdown-menu m-4" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="?">Profile</a></li>
-                                <li><a class="dropdown-item ms-3" href="#">Setting</a></li>
-                                <li><a class="dropdown-item ms-3" href="?page=logout">Logout</a></li>
-                            </ul>
-                        </div>
+                        
                         </li>
 
                     </ul>
@@ -152,35 +150,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid bg-white m-2">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
 
         <script src="../asset/js/sb-admin-2.min.js"></script>
         <script src="../asset/js/bootstrap.min.js"></script>
@@ -194,6 +164,9 @@ if (!isset($_GET['page'])) {
     include 'modul/home.php';
 }else{
     switch ($_GET['page']) {
+        case 'home':
+            include 'modul/home.php';
+            break;
         case 'logout':
             include 'login/logout.php';
             break;
