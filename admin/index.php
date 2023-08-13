@@ -53,7 +53,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active ">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="?page=home">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span class="">Dashboard</span></a>
             </li>
@@ -190,6 +190,9 @@
 </html>
 <?php
 error_reporting(0);
+if (!isset($_GET['page'])) {
+    include 'modul/home.php';
+}else{
     switch ($_GET['page']) {
         case 'logout':
             include 'login/logout.php';
@@ -199,5 +202,7 @@ error_reporting(0);
             # code...
             break;
     }
+}
+   
     }
 ?>
