@@ -1,3 +1,3 @@
 <?php
-    $con= mysqli_connect('localhost','root','','db_appkasir');
+    $con= mysqli_connect('localhost','root','gmrpl123','db_kasir');
 ?>
