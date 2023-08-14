@@ -14,7 +14,6 @@
                     <input type="text" class="form-control" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                     <label for="exampleInputEmail1" class="form-label mt-3" >jenis Barang</label>
-                    <select  name="jenis" id="" class="form-control">
                     <select name="jenis" id="" class="form-control">
                         <option value="elektronik">Elektronik</option>
                         <option value="kecantikan">Kecantikan</option>
@@ -36,10 +35,10 @@
                     $jenis = $_POST['jenis'];
                     $jumlah = $_POST['jumlah'];
 
-                    $sql = mysqli_query($con, "INSERT INTO tb_barang('','nama_brng','harga_brng','jenis_brng','jumlah_brng') VALUES('$nama','$harga','$jenis','$jumlah')");
+                    $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nama','$harga','$jenis','$jumlah')");
 
                     if ($sql) {
-                        echo "berhasil";
+                        // echo "berhasil";
                     }else{
                         echo "tidak";
                     }
@@ -81,6 +80,7 @@
                         <th scope="col">Harga Barang</th>
                         <th scope="col">Jenis Barang</th>
                         <th scope="col">Stok Barang</th>
+                        <th scope="col">Setting</th>
                         </tr>
                     </thead>
                     <?php
@@ -94,6 +94,17 @@
                                 <td><?=$row['harga_brng']?></td>
                                 <td><?=$row['jenis_brng']?></td>
                                 <td><?=$row['jumlah_brng']?></td>
+                                <td>
+                                <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Setting
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:25px"></i></a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px"></i></a></li>
+                                </ul>
+                                </div>
+                                </td>
                                 </tr>
                             </tbody>
                             <?php
