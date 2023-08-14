@@ -6,23 +6,23 @@
                 Input Barang
             </div>
             <div class="card-body">
-                <form action="" method="post">
+                <form action="" method="POST">
                     <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
-                    <input type="text" class="form-control" name="nmbrg" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                     <label for="exampleInputEmail1" class="form-label mt-3">Harga Barang</label>
                     <input type="text" class="form-control" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-                    <label for="exampleInputEmail1" class="form-label mt-3" name="jenis">jenis Barang</label>
-                    <select name="" id="" class="form-control">
+                    <label for="exampleInputEmail1" class="form-label mt-3" >jenis Barang</label>
+                    <select name="jenis" id="" class="form-control">
                         <option value="elektronik">Elektronik</option>
                         <option value="kecantikan">Kecantikan</option>
                         <option value="peralatan">Peralatan</option>
                         <option value="kendaraan">Kendaraan</option>
                     </select>
 
-                    <label for="exampleInputEmail1" class="form-label mt-3" name="jumlah">Jumlah Barang</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label mt-3" >Jumlah Barang</label>
+                    <input type="text" class="form-control" name="jumlah" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                     <button class="btn btn-primary mt-4" name="submit" type="submit">Masukkan</button>
                 </form>
@@ -30,12 +30,12 @@
                 <?php
 
                 if (isset($_POST['submit'])) {
-                    $nama = $_POST['nmbrg'];
+                    $nama = $_POST['nama'];
                     $harga = $_POST['harga'];
                     $jenis = $_POST['jenis'];
                     $jumlah = $_POST['jumlah'];
 
-                    $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('$nama','$harga','$jenis','$jumlah')");
+                    $sql = mysqli_query($con, "INSERT INTO tb_barang('','nama_brng','harga_brng','jenis_brng','jumlah_brng') VALUES('$nama','$harga','$jenis','$jumlah')");
 
                     if ($sql) {
                         echo "berhasil";
