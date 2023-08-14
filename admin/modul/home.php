@@ -113,6 +113,7 @@
                         </div>
                         <div class="col-xl-4 col-md-6 mb-4">
                             <?php
+<<<<<<< HEAD
                                 $sql = mysqli_query($con, "SELECT * FROM tb_barang WHERE jenis_brng='kecantikan'");
                                 $row = mysqli_num_rows($sql);
                             ?>
@@ -133,6 +134,8 @@
                         </div>
                         <div class="col-xl-4 col-md-6 mb-4">
                             <?php
+=======
+>>>>>>> a62b21b1b625ff2e6be087cd487aaab2544343c5
                                 $sql = mysqli_query($con, "SELECT * FROM tb_barang WHERE jenis_brng='kendaraan'");
                                 $row = mysqli_num_rows($sql);
                             ?>
@@ -151,5 +154,28 @@
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <?php
+                                $sql = mysqli_query($con, "SELECT * FROM tb_barang WHERE jenis_brng='kecantikan'");
+                                $row = mysqli_num_rows($sql);
+                            ?>
+                            <div class="card border-left-secondary shadow h-100 py-2">
+                                <div class="card-body" style="">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Data Kategori Kecantikan</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 ">Jumlah Data: <?php echo $row;?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                        <i class="fa fa-truck" aria-hidden="true" style="font-size:40px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+>>>>>>> a62b21b1b625ff2e6be087cd487aaab2544343c5
                     </div>
                 </div>
