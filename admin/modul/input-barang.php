@@ -6,7 +6,7 @@
                 Input Barang
             </div>
             <div class="card-body">
-                <form action="" method="post">
+                <form action="" method="POST">
                     <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
                     <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
 
@@ -14,7 +14,11 @@
                     <input type="text" class="form-control" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                     <label for="exampleInputEmail1" class="form-label mt-3" >jenis Barang</label>
+<<<<<<< HEAD
                     <select  name="jenis" id="" class="form-control">
+=======
+                    <select name="jenis" id="" class="form-control">
+>>>>>>> a62b21b1b625ff2e6be087cd487aaab2544343c5
                         <option value="elektronik">Elektronik</option>
                         <option value="kecantikan">Kecantikan</option>
                         <option value="peralatan">Peralatan</option>
@@ -26,7 +30,29 @@
 
                     <button class="btn btn-primary mt-4" name="submit" type="submit">Masukkan</button>
                 </form>
+<<<<<<< HEAD
                 <br>
+=======
+                
+                <?php
+
+                if (isset($_POST['submit'])) {
+                    $nama = $_POST['nama'];
+                    $harga = $_POST['harga'];
+                    $jenis = $_POST['jenis'];
+                    $jumlah = $_POST['jumlah'];
+
+                    $sql = mysqli_query($con, "INSERT INTO tb_barang('','nama_brng','harga_brng','jenis_brng','jumlah_brng') VALUES('$nama','$harga','$jenis','$jumlah')");
+
+                    if ($sql) {
+                        echo "berhasil";
+                    }else{
+                        echo "tidak";
+                    }
+                }
+                    
+                ?>
+>>>>>>> a62b21b1b625ff2e6be087cd487aaab2544343c5
             </div>
             <div class="card-footer bg-primary">
             </div>
