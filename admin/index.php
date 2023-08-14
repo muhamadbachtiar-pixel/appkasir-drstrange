@@ -34,7 +34,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
+<style>
+    .navbar-nav li:hover {
+        transition:1s;
+        background-color:black;
+    }
+    .navbar-nav a:hover {
+        
+    }
+</style>
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -60,17 +68,16 @@
                     <i class="fa fa-tachometer" aria-hidden="true"></i><span class="">Dashboard</span></a>
             </li>
             <hr class="sidebar-divider my-0">
-
+            <li class="nav-item active ">
+                <a class="nav-link" href="?page=input-barang">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i><span class="">Input Barang</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
             <li class="nav-item active ">
                 <a class="nav-link" href="?page=user">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">User</span></a>
-            </li>
-            <hr class="sidebar-divider my-0">
-            <li class="nav-item active ">
-                <a class="nav-link" href="?page=input-barang">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">Input Barang</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
@@ -89,7 +96,7 @@
                             <ul class="dropdown-menu m-4" aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="?">Profile</a></li>
                                 <li><a class="dropdown-item ms-3" href="#">Setting</a></li>
-                                <li><a class="dropdown-item ms-3" href="?page=logout">Logout</a></li>
+                                <li><a class="dropdown-item ms-3" href="?page=logout"></i>Logout</a></li>
                             </ul>
                         </div>
             </li>
