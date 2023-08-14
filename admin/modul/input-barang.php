@@ -14,11 +14,8 @@
                     <input type="text" class="form-control" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                     <label for="exampleInputEmail1" class="form-label mt-3" >jenis Barang</label>
-<<<<<<< HEAD
                     <select  name="jenis" id="" class="form-control">
-=======
                     <select name="jenis" id="" class="form-control">
->>>>>>> a62b21b1b625ff2e6be087cd487aaab2544343c5
                         <option value="elektronik">Elektronik</option>
                         <option value="kecantikan">Kecantikan</option>
                         <option value="peralatan">Peralatan</option>
@@ -30,10 +27,7 @@
 
                     <button class="btn btn-primary mt-4" name="submit" type="submit">Masukkan</button>
                 </form>
-<<<<<<< HEAD
                 <br>
-=======
-                
                 <?php
 
                 if (isset($_POST['submit'])) {
@@ -52,7 +46,6 @@
                 }
                     
                 ?>
->>>>>>> a62b21b1b625ff2e6be087cd487aaab2544343c5
             </div>
             <div class="card-footer bg-primary">
             </div>
