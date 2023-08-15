@@ -6,6 +6,9 @@
 	}else{
 		$jabatan = $_SESSION['jabatan'];
 		$nama = $_SESSION['nama'];
+		$user = $_SESSION['user'];
+		$pass = $_SESSION['pass'];
+		$email = $_SESSION['email'];
  ?>
 <!DOCTYPE html>
 <html lang="en">

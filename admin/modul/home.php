@@ -53,6 +53,26 @@
                         </div>
                         <div class="col-xl-4 col-md-6 mb-4">
                             <?php
+                                $sql = mysqli_query($con, "SELECT * FROM tb_admin");
+                                $row=mysqli_num_rows($sql);
+                            ?>
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Data Pekerja</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Jumlah Pekerja: <?php echo $row;?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                        <i class="fa fa-users" aria-hidden="true" style="font-size:40px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <?php
                                 $sql = mysqli_query($con, "SELECT * FROM tb_supplier");
                                 $row=mysqli_num_rows($sql);
                             ?>

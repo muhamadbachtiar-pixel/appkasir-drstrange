@@ -31,13 +31,16 @@
     include '../library/koneksi.php';
 	if (isset($_POST['submit'])) {
 		$user = $_POST['user'];
-		$pass = md5($_POST['pass']);
+		$pass = $_POST['pass'];
 		$sql = mysqli_query($con, "SELECT * FROM tb_admin WHERE username= '$user' and password= '$pass'");
 		$row =mysqli_num_rows($sql);
 		$result =mysqli_fetch_array($sql);
 		if ($row > 0) {
 			$_SESSION['jabatan']=$result['jabatan'];
 			$_SESSION['nama']=$result['nama'];
+			$_SESSION['user']=$result['username'];
+			$_SESSION['pass']=$result['password'];
+			$_SESSION['email']=$result['email'];
             echo "<script>alert('Selamat Datang');window.location.href='../admin/index.php';</script>";
             // header('location:index.php');
             
