@@ -71,9 +71,11 @@
                             <ul class="nav flex-column text-start">
                             <li class="nav-item">
                                 <a class="nav-link active me-5 text-left" aria-current="page" href="#">Overview</a>
+                                <hr>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active me-5 text-left" aria-current="page" href="#">Account Setting</a>
+                                <hr>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active me-5 text-left" aria-current="page" href="#">Help</a>

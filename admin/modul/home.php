@@ -171,5 +171,94 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <div class="col-xl-9 col-md-6 mb-4">
+                           
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body" style="">
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <h5 class="text-secondary mt-2"><b>Daftar Member</b></h5>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-secondary rounded-pill" type="submit">Today</button>
+                                            <button class="btn btn-secondary rounded-pill" type="submit">Week</button>
+                                            <button class="btn btn-secondary rounded-pill" type="submit">Month</button>
+                                        </div>
+                                    </div>
+                                    <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">foto</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">No Telpon</th>
+                                        <th scope="col">Alamat</th>
+                                        <th scope="col">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
+                                        $sql= mysqli_query($con,"SELECT * FROM tb_pelanggan");
+                                        while ($row = mysqli_fetch_array($sql)) {
+                                            ?>
+                                            <tr>
+                                            <th scope="row"><img src="image/user.png" alt="" width=50px></th>
+                                            <th scope="row"><?=$row['nama_plnggan']?></th>
+                                            <th scope="row"><?=$row['no_tlp']?></th>
+                                            <th scope="row"><?=$row['alamat']?></th>
+                                            <th scope="row"><?=$row['email']?></th>
+                                            </tr>
+                                    <?php
+                                        }
+                                    ?>
+                                    <tbody>
+                                       
+                                    </tbody>
+                                    </table>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                        <div class="col-xl-9 col-md-6 mb-4">
+                            
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body" style="">
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <h5 class="text-secondary mt-2"><b>Daftar Supplier</b></h5>
+                                        </div>
+                                    </div>
+                                    <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">foto</th>
+                                        <th scope="col">Nama Supplier</th>
+                                        <th scope="col">Alamat</th>
+                                        <th scope="col">No Telpon</th>
+                                        <th scope="col">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
+                                        $sql= mysqli_query($con,"SELECT * FROM tb_supplier");
+                                        while ($row = mysqli_fetch_array($sql)) {
+                                            ?>
+                                            <tr>
+                                            <th scope="row"><img src="image/user.png" alt="" width=50px></th>
+                                            <th scope="row"><?=$row['nama_supp']?></th>
+                                            <th scope="row"><?=$row['alamat']?></th>
+                                            <th scope="row"><?=$row['no_tlp']?></th>
+                                            <th scope="row"><?=$row['email']?></th>
+                                            </tr>
+                                    <?php
+                                        }
+                                    ?>
+                                    <tbody>
+                                       
+                                    </tbody>
+                                    </table>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
