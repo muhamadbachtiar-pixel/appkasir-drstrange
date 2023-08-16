@@ -139,7 +139,7 @@ include '../library/koneksi.php';
                                 <td class="text-center">
                                     <!-- <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"></a> <br> -->
 
-                                    <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"><i class="fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px"></i></a> <br>
+                                    <a href="#"><i class="btn-update fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px" id_barang="<?= $row['id_barang'] ?>"></i></a> <br>
                                     <a href="modul/delete-barang.php?delete=<?= $row['id_barang'] ?>"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a>
                                 </td>
                             </tr>
@@ -154,6 +154,52 @@ include '../library/koneksi.php';
                 </div> -->
         </div>
     </div>
+
+    <!-- Modal Update barang-->
+    <div class="modal fade" id="modalupdatebarang">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+            <!-- Bagian header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="judul"></h4>
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Bagian body -->
+            <div class="modal-body">
+                <div id="tampil_data">
+
+                </div>  
+            </div>
+            <!-- Bagian footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // update barang
+        $('.btn-update').on('click',function(){
+
+        var id_barang = $(this).attr("id_barang");
+        var nama_brng = $(this).attr("nama_brng");
+        $.ajax({
+            url: 'modul/update-barang.php',
+            method: 'post',
+            data: {id_barang:id_barang},
+            success:function(data){
+                $('#tampil_data').html(data);  
+                document.getElementById("judul").innerHTML='Update barang #'+id_barang;
+            }
+        });
+        // Membuka modal
+        $('#modalupdatebarang').modal('show');
+    });
+    </script>
 
 </body>
 
