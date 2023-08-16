@@ -78,6 +78,12 @@
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item active ">
+                <a class="nav-link" href="?page=input-jenis-barang">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">Input Jenis Barang</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active ">
                 <a class="nav-link" href="?page=user">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <i class="fa fa-user-circle" aria-hidden="true"></i><span class="">User</span></a>
@@ -195,6 +201,9 @@ if (!isset($_GET['page'])) {
             break;
         case 'input-barang':
             include 'modul/input-barang.php';
+            break;
+        case 'input-jenis-barang':
+            include 'modul/input-jenis-barang.php';
             break;
         case 'logout':
             include 'login/logout.php';

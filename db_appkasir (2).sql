@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2023 at 01:16 PM
+-- Generation Time: Aug 16, 2023 at 05:37 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -66,7 +66,36 @@ CREATE TABLE `tb_barang` (
 INSERT INTO `tb_barang` (`id_barang`, `nama_brng`, `gambar_brng`, `harga_brng`, `jenis_brng`, `deskripsi`, `jumlah_brng`) VALUES
 (9, 'Laptop Thinkpad 3180 ssd 256', 'thinkpad.jpg', '5.500.000', 'elektronik', 'Garansi : 1 bulan ( jasa dan service )\r\nGaransi : 1 minggu ( tukar unit selama stok ada )\r\n\r\nLenovo Thinkpad x270 Specs :\r\n# Prosesor : Intel Core i5-6300U (6TH)\r\n# Storage : SSD SATA 128/256/512\r\n# Ram : RAM 4/8/16 DDR4\r\n# Screen : 12,5\"inch\r\n# Grapic : Intel HD Grapic 520\r\n# Os : Window 10 PRO\r\n# Webcam : HD Web Camera\r\n# Keyboard JP\r\n# Realease date : 2017\r\n# Weight : 1,27 KG\r\n\r\nLenovo Thinkpad x270 Specs :\r\n# Prosesor : Intel Core i5-7300U (7TH)\r\n# Storage : SSD SATA 128/256/512\r\n# Ram : RAM 4/8/16 DDR4\r\n# Screen : 12,5\"inch\r\n# Grapic : Intel HD Grapic 620\r\n# Os : Window 10 PRO\r\n# Webcam : HD Web Camera\r\n# Keyboard JP\r\n# Realease date : 2017\r\n# Weight : 1,27 KGGaransi : 1 bulan ( jasa dan service )\r\nGaransi : 1 minggu ( tukar unit selama stok ada )\r\n\r\nLenovo Thinkpad x270 Specs :\r\n# Prosesor : Intel Core i5-6300U (6TH)\r\n# Storage : SSD SATA 128/256/512\r\n# Ram : RAM 4/8/16 DDR4\r\n# Screen : 12,5\"inch\r\n# Grapic : Intel HD Grapic 520\r\n# Os : Window 10 PRO\r\n# Webcam : HD Web Camera\r\n# Keyboard JP\r\n# Realease date : 2017\r\n# Weight : 1,27 KG\r\n\r\nLenovo Thinkpad x270 Specs :\r\n# Prosesor : Intel Core i5-7300U (7TH)\r\n# Storage : SSD SATA 128/256/512\r\n# Ram : RAM 4/8/16 DDR4\r\n# Screen : 12,5\"inch\r\n# Grapic : Intel HD Grapic 620\r\n# Os : Window 10 PRO\r\n# Webcam : HD Web Camera\r\n# Keyboard JP\r\n# Realease date : 2017\r\n# Weight : 1,27 KG', '3'),
 (13, 'shampoo zink cool 340ml', 'shampo.jpg', '56.000', 'kecantikan', 'Zinc Shampoo Anti Ketombe adalah shampo persembaan dari Zinc dengan formula yang disempurnakan, Formula Complex Zinc-PTO yan merupakan serum inovasi dari LION JAPAN untuk mengurangi ketombe di kepala. Tersedia dalam 2 varian : - Zinc Hairfall Treatment : Dilengkapi dengan ekstrak Japanese Ginseng merawat kekuatan akar rambut sehingga mencegah kerontokan dan membuat rambut halus. - Zinc Clean Active : Dilengkapi dengan Sea Salt membersihkan rambut dan di waktu yang sama melindungi dari kuman penyebab gatal serta melembutkan rambut yang kering dan kasar. -ZInc Refreshing Cool', '100'),
-(14, 'Infinix Hot 30 Play Ram 8/256', 'hp.jpg', '3.150.000', 'elektronik', 'Kelengkapan : - Unit - Charger - Antigores (Terpasang bawaan pabrikan) - Tempered Glass - Softcase - Wireless charge pad   NETWORK Technology GSM / HSPA / LTE LAUNCH Announced 2023, May 22 Status Available. Released 2023, May 22 BODY Dimensions 168.5 x 76.5 x 8.5 mm (6.63 x 3.01 x 0.33 in) Weight 205 g (7.23 oz) Build Glass front, plastic frame, glass back SIM Dual SIM (Nano-SIM, dual stand-by) IP53 DISPLAY Type AMOLED, 1B colors, 120Hz, 900 nits (peak) Size 6.78 inches, 113.7 cm2 (~88.2% screen-to-body ratio) Resolution 1080 x 2460 pixels (~388 ppi density) * the display diagonal size and resolution are not confirmed PLATFORM OS Android 13, XOS 13 Chipset Mediatek MT8781 Helio G99 (6nm) CPU Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55) GPU Mali-G57 MC2 MEMORY Card slot microSDXC (dedicated slot) Internal 128GB 8GB RAM, 256GB 8GB RAM UFS MAIN CAMERA Triple 108 MP, (wide), PDAF 2 MP, f/2.4, (depth) QVGA Features Quad-LED flash, HDR, panorama Video 1440p@30fps, 1080p@30fps SELFIE CAMERA Single 16 MP, f/2.0, (wide) Features LED flash, HDR Video 1080p@30fps SOUND Loudspeaker Yes, with dual speakers 3.5mm jack Yes Tuned by JBL 24-bit/192kHz audio COMMS WLAN Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct Bluetooth Yes Positioning GPS NFC Yes (market/region dependent) Radio FM radio USB USB Type-C 2.0, OTG FEATURES Sensors Fingerprint (side-mounted), accelerometer, gyro, proximity, compass BATTERY Type Li-Po 5000 mAh, non-removable Charging 68W wired,', '3');
+(14, 'Infinix Hot 30 Play Ram 8/256', 'hp.jpg', '3.150.000', 'elektronik', 'Kelengkapan : - Unit - Charger - Antigores (Terpasang bawaan pabrikan) - Tempered Glass - Softcase - Wireless charge pad   NETWORK Technology GSM / HSPA / LTE LAUNCH Announced 2023, May 22 Status Available. Released 2023, May 22 BODY Dimensions 168.5 x 76.5 x 8.5 mm (6.63 x 3.01 x 0.33 in) Weight 205 g (7.23 oz) Build Glass front, plastic frame, glass back SIM Dual SIM (Nano-SIM, dual stand-by) IP53 DISPLAY Type AMOLED, 1B colors, 120Hz, 900 nits (peak) Size 6.78 inches, 113.7 cm2 (~88.2% screen-to-body ratio) Resolution 1080 x 2460 pixels (~388 ppi density) * the display diagonal size and resolution are not confirmed PLATFORM OS Android 13, XOS 13 Chipset Mediatek MT8781 Helio G99 (6nm) CPU Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55) GPU Mali-G57 MC2 MEMORY Card slot microSDXC (dedicated slot) Internal 128GB 8GB RAM, 256GB 8GB RAM UFS MAIN CAMERA Triple 108 MP, (wide), PDAF 2 MP, f/2.4, (depth) QVGA Features Quad-LED flash, HDR, panorama Video 1440p@30fps, 1080p@30fps SELFIE CAMERA Single 16 MP, f/2.0, (wide) Features LED flash, HDR Video 1080p@30fps SOUND Loudspeaker Yes, with dual speakers 3.5mm jack Yes Tuned by JBL 24-bit/192kHz audio COMMS WLAN Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct Bluetooth Yes Positioning GPS NFC Yes (market/region dependent) Radio FM radio USB USB Type-C 2.0, OTG FEATURES Sensors Fingerprint (side-mounted), accelerometer, gyro, proximity, compass BATTERY Type Li-Po 5000 mAh, non-removable Charging 68W wired,', '3'),
+(15, 'motor R15 ', 'r15.jpg', '34.000.000', 'kendaraan', 'motor  R15', '1'),
+(16, 'meja kantor minimalis', 'meja.jpg', '4.000.000', 'peralatan', 'meja kantor minimalis dengan design menawan cocok untuk kerja', '4'),
+(17, 'shampoo zink ', 'shampo.jpg', '56.000', 'kecantikan', 'a', '1'),
+(18, 'shampoo zink ', 'shampo.jpg', '56.000', 'kecantikan', 'a', '1'),
+(19, 'shampoo zink ', 'shampo.jpg', '56.000', 'kecantikan', 'a', '1'),
+(20, 'mouse gaming ', 'mouse.jpg', '290.000', 'elektronik', 'mouse pad dengan design ala gaming membuat kita menjadi senang akan bermain', '3'),
+(21, 'Laptop Thinkpad 3180 ssd 256', 'hp.jpg', '200.000', 'elektronik', 'Zinc Shampoo Anti Ketombe adalah shampo persembaan dari Zinc dengan formula yang disempurnakan, Formula Complex Zinc-PTO yan merupakan serum inovasi dari LION JAPAN untuk mengurangi ketombe di kepala. Tersedia dalam 2 varian : - Zinc Hairfall Treatment : Dilengkapi dengan ekstrak Japanese Ginseng merawat kekuatan akar rambut sehingga mencegah kerontokan dan membuat rambut halus. - Zinc Clean Active : Dilengkapi dengan Sea Salt membersihkan rambut dan di waktu yang sama melindungi dari kuman penyebab gatal serta melembutkan rambut yang kering dan kasar. -ZInc Refreshing Cool', '1'),
+(22, '', 'hp.jpg', '', 'elektronik', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_kategori`
+--
+
+CREATE TABLE `tb_kategori` (
+  `id_kateogori` int(11) NOT NULL,
+  `jenis_brng` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_kategori`
+--
+
+INSERT INTO `tb_kategori` (`id_kateogori`, `jenis_brng`) VALUES
+(5, 'elektronik'),
+(1, 'kecantikan'),
+(2, 'kendaraan'),
+(4, 'peralatan');
 
 -- --------------------------------------------------------
 
@@ -153,7 +182,15 @@ ALTER TABLE `tb_admin`
 -- Indexes for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  ADD PRIMARY KEY (`id_barang`);
+  ADD PRIMARY KEY (`id_barang`),
+  ADD KEY `jenis_brng` (`jenis_brng`);
+
+--
+-- Indexes for table `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  ADD PRIMARY KEY (`id_kateogori`),
+  ADD UNIQUE KEY `jenis_brng` (`jenis_brng`);
 
 --
 -- Indexes for table `tb_pelanggan`
@@ -196,7 +233,13 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  MODIFY `id_kateogori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_pelanggan`
@@ -221,6 +264,16 @@ ALTER TABLE `tb_transaksi`
 --
 ALTER TABLE `tb_user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  ADD CONSTRAINT `tb_kategori_ibfk_1` FOREIGN KEY (`jenis_brng`) REFERENCES `tb_barang` (`jenis_brng`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
