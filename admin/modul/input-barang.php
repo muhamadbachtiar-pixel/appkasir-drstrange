@@ -1,3 +1,6 @@
+<?php
+include '../library/koneksi.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +39,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
                     <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
 
@@ -64,15 +67,19 @@
 
                 if (isset($_POST['submit'])) {
                     $nama = $_POST['nama'];
-                    $gambar = $_POST['gambar_brng'];
+                    $name = $_FILES['gambar']['name']; 
+                    $file = $_FILES['gambar']['tmp_name']; 
+                    move_uploaded_file($file,"../image/$name");
                     $harga = $_POST['harga'];
                     $jenis = $_POST['jenis'];
                     $jumlah = $_POST['jumlah'];
+                    
 
-                    $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nama','$gambar','$harga','$jenis','$jumlah')");
+
+                    $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nama','$name','$harga','$jenis','$jumlah')");
 
                     if ($sql) {
-                        // echo "berhasil";
+                        echo "berhasil";
                     }else{
                         echo "tidak";
                     }
