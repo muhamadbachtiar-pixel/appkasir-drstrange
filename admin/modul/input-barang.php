@@ -54,16 +54,16 @@ include '../library/koneksi.php';
                             <label for="exampleInputEmail1" class="form-label mt-3">jenis Barang</label>
                             <select name="jenis" id="" class="form-control">
                                 <?php
-                                    // $sql = mysqli_query($con, "SELECT * FROM tb_kategori");
-                                    // while ( $row = mysqli_fetch_array($sql)) {
-                                    //     echo"<option value='$row[jenis_brng]'>$row[jenis_brng]</option>";
-                                    // }
+                                $sql = mysqli_query($con, "SELECT * FROM tb_kategori");
+                                while ($row = mysqli_fetch_array($sql)) {
+                                    echo "<option value='$row[jenis_brng]'>$row[jenis_brng]</option>";
+                                }
                                 ?>
-                                <option value="elektronik">Elektronik</option>
+                                <!-- <option value="elektronik">Elektronik</option>
                                 <option value="kecantikan">Kecantikan</option>
                                 <option value="peralatan">Peralatan</option>
                                 <option value="kendaraan">Kendaraan</option>
-                                <option value="kendaraan">Narkotika</option>
+                                <option value="kendaraan">Narkotika</option> -->
                             </select>
 
                             <label for="exampleInputEmail1" class="form-label mt-3">Deskripsi Barang</label>
@@ -140,7 +140,7 @@ include '../library/koneksi.php';
                                     <!-- <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"></a> <br> -->
 
                                     <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"><i class="fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px"></i></a> <br>
-                                    <a href="modul/delete-barang.php?delete=<?= $row['id_barang'] ?>"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a>
+                                    <a href="index.php?page=input-barang&delete=<?= $row['id_barang'] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a>
                                 </td>
                             </tr>
 
@@ -149,6 +149,16 @@ include '../library/koneksi.php';
                         ?>
                     </tbody>
                 </table>
+                <?php
+                if (isset($_GET['delete'])) {
+                    $idt = $_GET['delete'];
+                    $sql = mysqli_query($con, "DELETE FROM tb_barang WHERE id_barang = '$idt'");
+                    if ($sql) {
+                        echo "<script>alert('Data Berhasil Dihapus');window.location.href='index.php?page=input-barang'</script>";
+                    }
+                }
+
+                ?>
             </div>
             <!-- <div class="card-footer bg-primary">
                 </div> -->
