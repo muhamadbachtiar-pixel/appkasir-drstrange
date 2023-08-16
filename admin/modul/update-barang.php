@@ -11,7 +11,8 @@
     $gambar_brng=$data['gambar_brng'];
     $harga_barang=$data['harga_brng'];
     $jenis_barang=$data['jenis_brng'];
-    $harga_barang=$data['harga_brng'];
+    $desk_barang=$data['deskripsi'];
+    $jumlah_barang=$data['jumlah_brng'];
     // $id_artikel=$data['id_artikel'];
 
 ?>
@@ -33,7 +34,7 @@
             <div class="col-sm-12">
                 <div class="form-group">
                     <label>Gambar Barang:</label>
-                    <input name="email" value="<?php echo $gambar_brng; ?>" type="file" class="form-control" placeholder="Masukan email" required>
+                    <input name="gambar" value="<?php echo $gambar_brng; ?>" type="file" class="form-control" placeholder="Masukan email" required>
                 </div>
             </div>
         </div>
@@ -42,7 +43,7 @@
             <div class="col-sm-12">
                 <div class="form-group">
                     <label>Harga Barang:</label>
-                    <input name="email" value="<?php echo $harga_barang; ?>" type="text" class="form-control" placeholder="Masukan email" required>
+                    <input name="harga" value="<?php echo $harga_barang; ?>" type="text" class="form-control" placeholder="Masukan email" required>
                 </div>
             </div>
         </div>
@@ -51,12 +52,15 @@
             <div class="col-sm-12">
                 <div class="form-group">
                     <label>Jenis Barang:</label>
-                    <select name="email" value="<?php echo $jenis_barang; ?>" required>
-                        <option value="elektronik">Elektronik</option>
+                    <select name="jenis" value="<?php echo $jenis_barang; ?>" required>
+                    <?php
+
+                    ?>
+                        <!-- <option value="elektronik">Elektronik</option>
                         <option value="kecantikan">Kecantikan</option>
                         <option value="peralatan">Peralatan</option>
                         <option value="kendaraan">Kendaraan</option>
-                        <option value="kendaraan">Narkotika</option>
+                        <option value="kendaraan">Narkotika</option> -->
                     </select>
                 </div>
             </div>
