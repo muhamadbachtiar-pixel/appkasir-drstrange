@@ -54,15 +54,16 @@ include '../library/koneksi.php';
                             <label for="exampleInputEmail1" class="form-label mt-3">jenis Barang</label>
                             <select name="jenis" id="" class="form-control">
                                 <?php
-                                    $sql = mysqli_query($con, "SELECT * FROM tb_kategori");
-                                    while ( $row = mysqli_fetch_array($sql)) {
-                                        echo"<option value='$row[jenis_brng]'>$row[jenis_brng]</option>";
-                                    }
+                                    // $sql = mysqli_query($con, "SELECT * FROM tb_kategori");
+                                    // while ( $row = mysqli_fetch_array($sql)) {
+                                    //     echo"<option value='$row[jenis_brng]'>$row[jenis_brng]</option>";
+                                    // }
                                 ?>
-                                <!-- <option value="elektronik">Elektronik</option>
+                                <option value="elektronik">Elektronik</option>
                                 <option value="kecantikan">Kecantikan</option>
                                 <option value="peralatan">Peralatan</option>
-                                <option value="kendaraan">Kendaraan</option> -->
+                                <option value="kendaraan">Kendaraan</option>
+                                <option value="kendaraan">Narkotika</option>
                             </select>
 
                             <label for="exampleInputEmail1" class="form-label mt-3">Deskripsi Barang</label>
@@ -130,7 +131,7 @@ include '../library/koneksi.php';
 
                             <tr>
                                 <td><?= $row['nama_brng'] ?></td>
-                                <td><img src="image/<?= $row['gambar_brng'] ?>" alt="" width=150></td>
+                                <td><img src="../image/<?= $row['gambar_brng'] ?>" alt="" width=150></td>
                                 <td><?= $row['harga_brng'] ?></td>
                                 <td><?= $row['jenis_brng'] ?></td>
                                 <td><?= $row['deskripsi'] ?></td>
