@@ -70,15 +70,15 @@
                             <div class="card-body">
                             <ul class="nav flex-column text-start">
                             <li class="nav-item">
-                                <a class="nav-link active me-5 text-left" aria-current="page" href="#">Overview</a>
+                                <a class="nav-link active me-5 text-left text-dark" aria-current="page" href="#">Overview</a>
                                 <hr>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active me-5 text-left" aria-current="page" href="#">Account Setting</a>
+                                <a class="nav-link active me-5 text-left text-dark" aria-current="page" href="#">Account Setting</a>
                                 <hr>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active me-5 text-left" aria-current="page" href="#">Help</a>
+                                <a class="nav-link active me-5 text-left text-dark" aria-current="page" href="#">Help</a>
                             </li>
                             </ul>
                             </div>
