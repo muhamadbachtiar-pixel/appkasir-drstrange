@@ -1,5 +1,5 @@
 <?php   
-    include './library/koneksi.php';
+    include '../library/koneksi.php';
     if(isset($_GET['delete'])){
         $id = $_GET['delete'];
 

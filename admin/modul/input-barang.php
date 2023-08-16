@@ -57,6 +57,9 @@ include '../library/koneksi.php';
                         <option value="kendaraan">Kendaraan</option>
                     </select>
 
+                    <label for="exampleInputEmail1" class="form-label mt-3" >Deskripsi Barang</label>
+                    <input type="text" class="form-control" name="desk" id="exampleInputEmail1" aria-describedby="emailHelp">
+
                     <label for="exampleInputEmail1" class="form-label mt-3" >Jumlah Barang</label>
                     <input type="text" class="form-control" name="jumlah" id="exampleInputEmail1" aria-describedby="emailHelp">
 
@@ -72,16 +75,17 @@ include '../library/koneksi.php';
                     move_uploaded_file($file,"../image/$name");
                     $harga = $_POST['harga'];
                     $jenis = $_POST['jenis'];
+                    $desk = $_POST['desk'];
                     $jumlah = $_POST['jumlah'];
                     
 
 
-                    $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nama','$name','$harga','$jenis','$jumlah')");
+                    $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nama','$name','$harga','$jenis','$desk','$jumlah')");
 
-                    if ($sql) {
-                        echo "berhasil";
-                    }else{
+                    if (!$sql) {
                         echo "tidak";
+                    }else{
+                        
                     }
                 }
                     
@@ -105,6 +109,7 @@ include '../library/koneksi.php';
                                 <th>Gambar Barang</th>
                                 <th>Harga Barang</th>
                                 <th>jenis Barang</th>
+                                <th>Deskripsi Barang</th>
                                 <th>Jumlah Barang</th>
                                 <th>Setting</th>
                             </tr>
@@ -121,6 +126,7 @@ include '../library/koneksi.php';
                                                 <td><img src="image/<?=$row['gambar_brng']?>" alt="" width=150></td>
                                                 <td><?=$row['harga_brng']?></td>
                                                 <td><?=$row['jenis_brng']?></td>
+                                                <td><?=$row['deskripsi']?></td>
                                                 <td><?=$row['jumlah_brng']?></td>
                                                 <td class="text-center">
                                                 <a href=""><i class="fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px"></i></a> <br>
