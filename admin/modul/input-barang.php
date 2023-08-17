@@ -139,13 +139,10 @@ include '../library/koneksi.php';
                                 <td class="text-center">
                                     <!-- <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"></a> <br> -->
 
-<<<<<<< HEAD
-                                    <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"><i class="fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px"></i></a> <br>
-                                    <a href="index.php?page=input-barang&delete=<?= $row['id_barang'] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a>
-=======
+                                    <!-- <a href="modul/update-barang.php?update=<?= $row['id_barang'] ?>"><i class="fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px"></i></a> <br> -->
+                                    <a href="index.php?page=input-barang&delete=<?= $row['id_barang'] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a> 
                                     <a href="#"><i class="btn-update fa fa-pencil-square-o text-primary" aria-hidden="true" style="font-size:25px" id_barang="<?= $row['id_barang'] ?>"></i></a> <br>
-                                    <a href="modul/delete-barang.php?delete=<?= $row['id_barang'] ?>"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a>
->>>>>>> 76fd20306411df9f9bf212436cf6b98301efb616
+                                    <!-- <a href="modul/delete-barang.php?delete=<?= $row['id_barang'] ?>"><i class="fa fa-trash text-danger mt-3" aria-hidden="true" style="font-size:25px"></i></a> -->
                                 </td>
                             </tr>
 

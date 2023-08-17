@@ -205,6 +205,9 @@ if (!isset($_GET['page'])) {
         case 'input-jenis-barang':
             include 'modul/input-jenis-barang.php';
             break;
+        case 'delete':
+            include 'modul/delete-profile.php';
+            break;
         case 'logout':
             include 'login/logout.php';
             break;
