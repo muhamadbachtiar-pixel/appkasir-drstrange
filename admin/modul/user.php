@@ -23,8 +23,8 @@
                                 <img src="image/user.png" alt="" width=150px>
                                     <h2 class="mt-"><?=$nama?></h2>
                                     <h6 class="mt-3"><?=$jabatan?></h6>
-                                    <a href=""><button class="btn btn-success rounded-pill" type="submit">Update</button></a>
-                                    <a href="modul/delete-profile.php?delete=<?=$row['id_admin']?>"><button class="btn btn-danger rounded-pill" type="submit">Delete</button></a>
+                                    <a href=""><button class="btn btn-success rounded-pill" type="submit">Perbarui Akun</button></a>
+                                    <a href="modul/delete-profile.php?delete=<?=$row['id_admin']?>"><button class="btn btn-danger rounded-pill" type="submit">Hapus Akun</button></a>
                             </div>
                             <div class="card-body">
                             <ul class="nav flex-column text-start">
