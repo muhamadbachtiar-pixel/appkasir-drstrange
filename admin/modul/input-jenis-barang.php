@@ -45,7 +45,7 @@
                             ?>
                                 <tr>
                                     <td scope="">
-                                        <h6><?= $row['id_kateogori'] ?></h6>
+                                        <h6><?= $row['id_kategori'] ?></h6>
                                     </td>
                                     <td><?= $row['jenis_brng'] ?></td>
                                     <td>

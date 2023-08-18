@@ -26,6 +26,32 @@ include '../library/koneksi.php';
 
 <body>
     <div class="container-fluid">
+        <?php
+            // if (isset($_GET['tambah'])) {
+            //     //Mengecek nilai variabel tambah 
+            //     if ($_GET['tambah']=='berhasil'){
+            //         echo"<div class='alert alert-success'><strong>Berhasil!</strong> barang telah di tambahkan!</div>";
+            //     }else if ($_GET['tambah']=='gagal'){
+            //         echo"<div class='alert alert-danger'><strong>Gagal!</strong> barang gagal di tambahkan!</div>";
+            //     }    
+            // }
+            if (isset($_GET['edit'])) {
+                //Mengecek nilai variabel edit 
+                if ($_GET['edit']=='berhasil'){
+                    echo"<div class='alert alert-success'><strong>Berhasil!</strong> barang telah di update!</div>";
+                }else if ($_GET['edit']=='gagal'){
+                    echo"<div class='alert alert-danger'><strong>Gagal!</strong> barang gagal di update!</div>";
+                }    
+            }
+            // if (isset($_GET['hapus'])) {
+            //     //Mengecek nilai variabel hapus 
+            //     if ($_GET['hapus']=='berhasil'){
+            //         echo"<div class='alert alert-success'><strong>Berhasil!</strong> barang telah di hapus!</div>";
+            //     }else if ($_GET['hapus']=='gagal'){
+            //         echo"<div class='alert alert-danger'><strong>Gagal!</strong> barang gagal di hapus!</div>";
+            //     }    
+            // }
+        ?>
         <h2>DATA BARANG</h2>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
