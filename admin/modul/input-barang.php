@@ -107,7 +107,7 @@ include '../library/koneksi.php';
                             $nama = $_POST['nama'];
                             $name = $_FILES['gambar']['name'];
                             $file = $_FILES['gambar']['tmp_name'];
-                            move_uploaded_file($file, "../image/$name");
+                            move_uploaded_file($file, "image/$name");
                             $harga = $_POST['harga'];
                             $jenis = $_POST['jenis'];
                             $desk = $_POST['desk'];
@@ -157,8 +157,8 @@ include '../library/koneksi.php';
 
                             <tr>
                                 <td><?= $row['nama_brng'] ?></td>
-                                <td><img src="../image/<?= $row['gambar_brng'] ?>" alt="" width=150></td>
-                                <td><?= $row['harga_brng'] ?></td>
+                                <td><img src="image/<?= $row['gambar_brng'] ?>" alt="" width=150></td>
+                                <td>Rp<?= $row['harga_brng'] ?></td>
                                 <td><?= $row['jenis_brng'] ?></td>
                                 <td><?= $row['deskripsi'] ?></td>
                                 <td><?= $row['jumlah_brng'] ?></td>
@@ -224,7 +224,7 @@ include '../library/koneksi.php';
         $('.btn-update').on('click',function(){
 
         var id_barang = $(this).attr("id_barang");
-        var nama_brng = $(this).attr("nama_brng");
+        
         $.ajax({
             url: 'modul/update-barang.php',
             method: 'post',
