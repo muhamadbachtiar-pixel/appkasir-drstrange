@@ -68,10 +68,7 @@ include '../library/koneksi.php';
                     </div>
                     <div class="modal-body">
                         <form action="" method="POST" enctype="multipart/form-data">
-                            <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
-                            <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
-
-                            <label for="exampleInputEmail1" class="form-label">Nama Supplier</label>
+                        <label for="exampleInputEmail1" class="form-label">Nama Supplier</label>
                             <select name="supp" id="" class="form-control">
                                 <?php
                                 $sql = mysqli_query($con, "SELECT * FROM tb_supplier");
@@ -80,6 +77,9 @@ include '../library/koneksi.php';
                                 }
                                 ?>
                             </select>
+                            
+                            <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
+                            <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                             <label for="exampleInputEmail1" class="form-label mt-1">gambar Barang</label>
                             <input type="file" class="form-control" name="gambar" id="exampleInputEmail1" aria-describedby="emailHelp">
