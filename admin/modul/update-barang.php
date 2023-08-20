@@ -21,7 +21,7 @@
                 <div class="form-group">
                     <label>Gambar Barang:</label>
 
-                    <input name="gambar"  type="file" class="form-control" value="<?=$row['gambar_brng'] ?>" required>
+                    <input name="gambar" type="file" class="form-control" value="<?=$row['gambar_brng'] ?>" required>
 
                 </div>
             </div>
