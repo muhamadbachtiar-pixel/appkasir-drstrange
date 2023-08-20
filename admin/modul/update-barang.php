@@ -5,20 +5,8 @@
     $sql = mysqli_query($con,"SELECT * FROM tb_barang");
     $row = mysqli_fetch_array($sql);
 
-    $query = mysqli_query($con, "SELECT * FROM tb_barang where id_barang=$id_barang  ");
-    $data = mysqli_fetch_array($query); 
-
-    // $judul_artikel=$data['judul_artikel'];
-    $nama_barang=$data['nama_brng'];
-    $gambar_barang=$data['gambar_brng'];
-    $harga_barang=$data['harga_brng'];
-    $jenis_barang=$data['jenis_brng'];
-    $desk_barang=$data['deskripsi'];
-    $jumlah_barang=$data['jumlah_brng'];
-    // $id_artikel=$data['id_artikel'];
-
 ?>
-    <form action="modul/update-barang.php" method="post">
+    <form action="modul/update-barang.php" method="post" type="multipart/form-data">
     <div class="form-group">
         </div>
         <div class="form-group">
@@ -86,13 +74,12 @@
     </form>
 
 <?php
-    include '../lib/koneksi.php';
     if (isset($_POST['simpan_edit'])) {
 
         $nama = $_POST['nama'];
         $name = $_FILES['gambar']['name'];
         $file = $_FILES['gambar']['tmp_name'];
-        move_uploaded_file($file,"../image/$nama");
+        move_uploaded_file($file,"../image/$name");
         $harga = $_POST['harga'];
         $jenis = $_POST['jenis'];
         $desk = $_POST['desk'];
@@ -100,13 +87,5 @@
         if (empty($_FILES['gambar']['name'])) {
             $sql = mysqli_query($con, "UPDATE tb_barang SET nama_brng = '$nama', gambar_brng = '$name', harga_brng = '$harga', jenis_brng = '$jenis', deskripsi = '$desk' , jumlah_brng = '$jumlah'");
         }
-        // $sql = mysqli_query($con,"UPDATE tb_barang SET nama_brng='$nama',gambar_brng='$file',harga_brng='$harga',jenis_brng='$jenis',deskripsi='$desk',jumlah_brng='$jumlah' WHERE '");
-        // if ($sql) {
-        //     header("Location:../index.php?halaman=ulasan&edit=berhasil");
-        // }
-        // else {
-        //     header("Location:../index.php?halaman=ulasan&edit=gagal");;
-
-        // }
     }
 ?>
