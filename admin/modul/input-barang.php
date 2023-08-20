@@ -71,7 +71,17 @@ include '../library/koneksi.php';
                             <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
                             <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-                            <label for="exampleInputEmail1" class="form-label">gambar Barang</label>
+                            <label for="exampleInputEmail1" class="form-label">Nama Supplier</label>
+                            <select name="supp" id="" class="form-control">
+                                <?php
+                                $sql = mysqli_query($con, "SELECT * FROM tb_supplier");
+                                while ($row = mysqli_fetch_array($sql)) {
+                                    echo "<option value='$row[nama_supp]'>$row[nama_supp]</option>";
+                                }
+                                ?>
+                            </select>
+
+                            <label for="exampleInputEmail1" class="form-label mt-1">gambar Barang</label>
                             <input type="file" class="form-control" name="gambar" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                             <label for="exampleInputEmail1" class="form-label mt-3">Harga Barang</label>
@@ -85,11 +95,6 @@ include '../library/koneksi.php';
                                     echo "<option value='$row[jenis_brng]'>$row[jenis_brng]</option>";
                                 }
                                 ?>
-                                <!-- <option value="elektronik">Elektronik</option>
-                                <option value="kecantikan">Kecantikan</option>
-                                <option value="peralatan">Peralatan</option>
-                                <option value="kendaraan">Kendaraan</option>
-                                <option value="kendaraan">Narkotika</option> -->
                             </select>
 
                             <label for="exampleInputEmail1" class="form-label mt-3">Deskripsi Barang</label>
@@ -104,6 +109,7 @@ include '../library/koneksi.php';
                         <?php
 
                         if (isset($_POST['submit'])) {
+                            $nm_supp = $_POST['supp'];
                             $nama = $_POST['nama'];
                             $name = $_FILES['gambar']['name'];
                             $file = $_FILES['gambar']['tmp_name'];
@@ -115,7 +121,7 @@ include '../library/koneksi.php';
 
 
 
-                            $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nama','$name','$harga','$jenis','$desk','$jumlah')");
+                            $sql = mysqli_query($con, "INSERT INTO tb_barang VALUES('','$nm_supp','$nama','$name','$harga','$jenis','$desk','$jumlah')");
 
                             if (!$sql) {
                                 echo "tidak";
