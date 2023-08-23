@@ -72,6 +72,18 @@
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item active ">
+                <a class="nav-link" href="?page=supplier">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i><span class="">Supplier</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active ">
+                <a class="nav-link" href="?page=pelanggan">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i><span class="">pelanggan</span></a>
+            </li>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active ">
                 <a class="nav-link" href="?page=input-barang">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <i class="fa fa-pencil" aria-hidden="true"></i><span class="">Input Barang</span></a>
@@ -201,6 +213,12 @@ if (!isset($_GET['page'])) {
             break;
         case 'input-barang':
             include 'modul/input-barang.php';
+            break;
+        case 'suplier':
+            include 'modul/suplier.php';
+            break;
+        case 'pelanggan':
+            include 'modul/pelanggan.php';
             break;
         case 'input-jenis-barang':
             include 'modul/input-jenis-barang.php';
